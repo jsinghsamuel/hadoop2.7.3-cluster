@@ -1,4 +1,4 @@
-# Creates pseudo distributed hadoop 2.7.3
+# Creates pseudo distributed hadoop 2.7.3 cluster
 #
 # docker build -t sequenceiq/hadoop .
 
