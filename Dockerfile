@@ -14,7 +14,7 @@ RUN apt update; \
     apt install -y vim;
 
 # Download the Hadoop package	
-RUN wget http://mirror.fibergrid.in/apache/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz
+RUN wget http://www-us.apache.org/dist/hadoop/common/stable/hadoop-2.7.3.tar.gz
 RUN tar xvf hadoop-2.7.3.tar.gz
 RUN mv hadoop-2.7.3 hadoop
 RUN mv hadoop /usr/
