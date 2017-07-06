@@ -40,3 +40,37 @@ docker container run -d -it --name hc-cluster-dn3 --network hc-cluster --hostnam
 docker container run -d -it --name hc-cluster-dn4 --network hc-cluster --hostname hc-cluster-dn4 -p 4042:8042 -p 40075:50075 hadoop2.7.3-cluster 
 
 docker container run -d -it --name hc-cluster-dn5 --network hc-cluster --hostname hc-cluster-dn5 -p 5042:8042 -p 50075:50075 hadoop2.7.3-cluster 
+
+
+Login to hc-cluster-nn
+docker container exec -it hc-cluster-nn bash
+
+su hduser
+hdfs namenode -format
+cd /usr/hadoop/etc/hadoop
+  vi slaves
+    hc-cluster-dn1
+    hc-cluster-dn2
+    hc-cluster-dn3
+    
+  vi masters
+    hc-cluster-jt
+
+  start-dfs.sh
+  scp /usr/hadoop/etc/hadoop/slaves hc-cluster-jt:/usr/hadoop/etc/hadoop/slaves
+    
+Login to hc-cluster-jt
+
+su hduser
+start-yarn.sh
+
+Check the servers running in the Host :
+
+Namenode :
+http://localhost:50070
+
+Resource Manager
+http://localhost:8088
+
+Login to hc-cluster-nn
+docker container exec -it hc-cluster-nn bash
