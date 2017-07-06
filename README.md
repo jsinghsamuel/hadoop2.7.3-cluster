@@ -1,4 +1,4 @@
-Creating Hadoop 1.2.1 cluster on Ubuntu OS. 
+Creating Hadoop 2.7.3 cluster on Ubuntu OS. 
 -------------------------------------------
 
 Building the image :
