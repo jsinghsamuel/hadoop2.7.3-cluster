@@ -41,6 +41,7 @@ docker container run -d -it --name hc-cluster-dn4 --network hc-cluster --hostnam
 
 docker container run -d -it --name hc-cluster-dn5 --network hc-cluster --hostname hc-cluster-dn5 -p 5042:8042 -p 50075:50075 hadoop2.7.3-cluster 
 
+-----------------------
 
 Login to hc-cluster-nn
 docker container exec -it hc-cluster-nn bash
@@ -60,6 +61,8 @@ cd /usr/hadoop/etc/hadoop
 
   start-dfs.sh
   scp /usr/hadoop/etc/hadoop/slaves hc-cluster-jt:/usr/hadoop/etc/hadoop/slaves
+  
+--------------------------
     
 Login to hc-cluster-jt
 
