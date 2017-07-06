@@ -47,7 +47,9 @@ docker container exec -it hc-cluster-nn bash
 
 su hduser
 hdfs namenode -format
+
 cd /usr/hadoop/etc/hadoop
+
   vi slaves
     hc-cluster-dn1
     hc-cluster-dn2
